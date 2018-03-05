@@ -1,15 +1,18 @@
 # Zahlenraten
 
 import random
-zufallszahl = random.randint(1,100)
 
 titel = "Willkommen beim Zahlen-Rate-Spiel!"
-text = "Versuche meine Zahl zwischen 1 und 100 zu erraten."
-eingabeText = "Bitte gib eine Zahl ein: "
-
 print(titel)
+
+von = int(input("Bitte die Zufallszahl-Unterschranke festlegen: "))
+bis = int(input("Bitte die Zufallszahl-Oberschranke festlegen: "))
+zufallszahl = random.randint(von, bis)
+
+text = "Versuche meine Zahl zwischen " + str(von) + " und " + str(bis) + " zu erraten."
 print(text)
 
+eingabeText = "Bitte gib eine Zahl ein: "
 fertig = False
 anzahlDerVersuche = 0
 
